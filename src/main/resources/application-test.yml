@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: Laboratory
+  datasource:
+    url: jdbc:h2:mem:laboratory
+    driver-class-name: org.h2.Driver
+    username: lab
+    password: lab
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+  h2:
+    console:
+      enabled: true
+  startup:
+    data-creator:
+      users: true
+logging:
+  level:
+    org.springframework: debug
+server:
+  port: 8043
